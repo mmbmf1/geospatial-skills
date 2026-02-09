@@ -49,8 +49,8 @@ Useful for “contiguity” checks or merging segment corridors.
 
     SELECT
       ST_Union(ST_Buffer(geom, 0.5)) AS buffered_union
-    FROM cable_segments
-    WHERE segment_id = $1;
+    FROM line_segments
+    WHERE id = $1;
 
 ## Buffer for safer intersects (line corridor)
 
